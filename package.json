@@ -1,0 +1,54 @@
+{
+  "name": "mcp-uspto",
+  "version": "1.0.0",
+  "description": "This is a Model Context Protocol (MCP) server for USPTO Patent data. It provides structured context and information about patents to AI models, enabling them to answer questions about patents more effectively.",
+  "main": "dist/server.js",
+  "bin": {
+    "mcp-uspto": "./dist/bin/mcp-uspto.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liveric/mcp-uspto.git"
+  },
+  "keywords": [
+    "uspto",
+    "patents",
+    "api",
+    "mcp",
+    "model-context-protocol",
+    "search"
+  ],
+  "author": "Eric Chandler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liveric/mcp-uspto/issues"
+  },
+  "homepage": "https://github.com/liveric/mcp-uspto#readme",
+  "dependencies": {
+    "@types/axios": "^0.9.36",
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
